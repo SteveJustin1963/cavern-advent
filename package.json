@@ -1,0 +1,9 @@
+{
+  "name": "cavern-advent",
+  "version": "1.0.0",
+  "description": "Classic text adventure from 1983 ",
+  "main": "index.js",
+  "author": "John Hardy <jh@lagado.com>",
+  "license": "GPL",
+  "private": false
+}
