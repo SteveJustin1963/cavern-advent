@@ -22,6 +22,7 @@ export const ITEM_END = 24;
 // Object indices (P array)
 export const OBJ_GRILL = 24; // ventilation grill
 export const OBJ_CANDLE = 21;
+export const OBJ_SWORD = 20;
 
 // P(24) initial room
 export const GRILL_START_ROOM = 38;
