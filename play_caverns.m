@@ -402,12 +402,12 @@ function state = process_command(state, command, map, direction_words, entities)
     printf("│(need  │     │    │drop/put  │  │use │                   Exit game\n");
     printf("│compass│     │    │          │  └─┬──┘\n");
     printf("│or     │     │    └────┬─────┘    │\n");
-    printf("│random)│     │         │      ┌───┴────┐\n");
-    printf("└───────┘     │    ┌────▼────┐ │ galar  │ Teleport\n");
-    printf("              │    │  key    │ │  ape   │ Open wall\n");
+    printf("│random)│     │         │      ┌───┴─────┐\n");
+    printf("└───────┘     │    ┌────▼────┐ │ galar   │ Teleport\n");
+    printf("              │    │  key    │ │  ape    │ Open wall\n");
     printf("         ┌────▼──┐ │  bomb   │ │say magic│ Castle only\n");
-    printf("         │  i    │ │  rope   │ └────────┘\n");
-    printf("         │inventory │ candle  │\n");
+    printf("         │  i    │ │  rope   │ └─────────┘\n");
+    printf("         inventory │ candle  │\n");
     printf("         └───────┘ │  sword  │\n");
     printf("                   └─────────┘\n");
     printf("                        │\n");
@@ -417,8 +417,8 @@ function state = process_command(state, command, map, direction_words, entities)
     printf("                   └──────────┘\n");
     printf("\n");
     printf("         ╔═══════════════════════════════════════════╗\n");
-    printf("         ║ COMBAT: attack/kill (need sword!)        ║\n");
-    printf("         ║ Damage: 3-25 per hit | Run by moving away║\n");
+    printf("         ║ COMBAT: attack/kill (need sword!)         ║\n");
+    printf("         ║ Damage: 3-25 per hit | Run by moving away ║\n");
     printf("         ╚═══════════════════════════════════════════╝\n");
     printf("\n");
     return;
