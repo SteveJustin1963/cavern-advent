@@ -19,14 +19,18 @@ describe("map data", () => {
 
   it("resolves symbolic tokens against state", () => {
     const state = createInitialState();
-    expect(resolveMapToken(ExitSymbol.H, state)).toBe(state.H);
-    expect(resolveMapToken(ExitSymbol.D, state)).toBe(state.D);
+    expect(resolveMapToken(ExitSymbol.BridgeRope, state)).toBe(
+      state.bridgeRopeExit
+    );
+    expect(resolveMapToken(ExitSymbol.Drawbridge, state)).toBe(
+      state.drawbridgeExit
+    );
   });
 
   it("looks up exits by room and direction", () => {
     const state = createInitialState();
     expect(getExit(state, 1, Direction.North)).toBe(2);
-    expect(getExit(state, 10, Direction.South)).toBe(state.H);
+    expect(getExit(state, 10, Direction.South)).toBe(state.bridgeRopeExit);
   });
 
   it("matches the original BASIC DATA order", () => {

@@ -38,12 +38,12 @@ const initialPositions: number[] = [
 export function createInitialState(): GameState {
   return {
     room: START_ROOM,
-    H: DEST_BRIDGE_SAFE,
-    D: DEATH_EXIT,
-    W: 0,
-    G: 0,
-    T: 0,
-    E: 0,
+    bridgeRopeExit: DEST_BRIDGE_SAFE,
+    drawbridgeExit: DEATH_EXIT,
+    waterfallLedgeExit: 0,
+    grateExit: 0,
+    bombDoorExit: 0,
+    cryptWallExit: 0,
     moves: 0,
     alive: true,
     candleLit: true,

@@ -250,7 +250,7 @@ export function getLocationText(state: GameState): string[] {
     lines.push("You are deep in a dark cavern.");
   }
 
-  if ((a === 10 || a === 12) && state.H === DEATH_EXIT) {
+  if ((a === 10 || a === 12) && state.bridgeRopeExit === DEATH_EXIT) {
     lines.push(
       "Two of the ropes have snapped under your weight. It's totally unfit to cross again."
     );
@@ -260,7 +260,7 @@ export function getLocationText(state: GameState): string[] {
     lines.push("You can also see the bloody corpse of an enormous dragon.");
   }
 
-  if (a === 48 && state.D === 49) {
+  if (a === 48 && state.drawbridgeExit === 49) {
     lines.push("A mighty golden drawbridge spans the waters.");
   }
 

@@ -6,24 +6,24 @@ export enum Direction {
 }
 
 export enum ExitSymbol {
-  H = "H",
-  T = "T",
-  E = "E",
-  W = "W",
-  G = "G",
-  D = "D",
+  BridgeRope = "BRIDGE_ROPE", // H in BASIC
+  BombDoor = "BOMB_DOOR", // T in BASIC
+  CryptWall = "CRYPT_WALL", // E in BASIC
+  WaterfallLedge = "WATERFALL_LEDGE", // W in BASIC
+  Grate = "GRATE", // G in BASIC
+  Drawbridge = "DRAWBRIDGE", // D in BASIC
 }
 
 export type ExitToken = number | ExitSymbol;
 
 export interface GameState {
   room: number; // A in BASIC
-  H: number;
-  D: number;
-  W: number;
-  G: number;
-  T: number;
-  E: number;
+  bridgeRopeExit: number; // H in BASIC
+  drawbridgeExit: number; // D in BASIC
+  waterfallLedgeExit: number; // W in BASIC
+  grateExit: number; // G in BASIC
+  bombDoorExit: number; // T in BASIC
+  cryptWallExit: number; // E in BASIC
   moves: number; // U in BASIC
   alive: boolean;
   candleLit: boolean; // C0 in BASIC, true when light is available

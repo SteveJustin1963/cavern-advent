@@ -163,7 +163,7 @@ export function handleInput(state: GameState, raw: string): GameResponse {
 
   if (search(normalized, " ape ") > 0) {
     output.push("Hey! the eastern wall of the crypt slid open...");
-    state.E = 38;
+    state.cryptWallExit = 38;
     return { output, state };
   }
 
@@ -236,19 +236,19 @@ export function handleInput(state: GameState, raw: string): GameResponse {
 
 function applyDynamicFlags(state: GameState): void {
   if (state.room === ROOM_BRIDGE_HALF) {
-    state.H = DEATH_EXIT;
+    state.bridgeRopeExit = DEATH_EXIT;
   }
   if (state.room === ROOM_WATERFALL) {
-    state.W = DEST_STEPS;
+    state.waterfallLedgeExit = DEST_STEPS;
   }
   if (state.room === ROOM_LOKI_STATUE) {
-    state.W = 0;
+    state.waterfallLedgeExit = 0;
   }
   if (state.positions[OBJ_GRILL] !== GRILL_START_ROOM) {
-    state.G = DEST_GRATE_OPEN;
+    state.grateExit = DEST_GRATE_OPEN;
   }
   if (state.room === ROOM_DRAWBRIDGE) {
-    state.D = ROOM_DRAWBRIDGE;
+    state.drawbridgeExit = ROOM_DRAWBRIDGE;
   }
 }
 

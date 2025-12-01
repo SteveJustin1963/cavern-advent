@@ -21,9 +21,9 @@ export const mapData: ExitToken[][] = [
   [0, 0, 6, 0],
   // Rooms 9–12
   [0, 10, 4, 0],
-  [9, ExitSymbol.H, 4, 0],
+  [9, ExitSymbol.BridgeRope, 4, 0],
   [10, 12, DEATH_EXIT, DEATH_EXIT],
-  [ExitSymbol.H, 13, 13, 0],
+  [ExitSymbol.BridgeRope, 13, 13, 0],
   // Rooms 13–16
   [12, 12, 14, 12],
   [15, 16, 0, 13],
@@ -33,7 +33,7 @@ export const mapData: ExitToken[][] = [
   [0, 0, 16, 0],
   [16, 0, 23, 0],
   [0, 0, 20, 0],
-  [21, 23, 0, ExitSymbol.T],
+  [21, 23, 0, ExitSymbol.BombDoor],
   // Rooms 21–24
   [0, 24, 0, 20],
   [0, 23, 21, 16],
@@ -55,8 +55,8 @@ export const mapData: ExitToken[][] = [
   [0, 0, 0, 0],
   [39, 0, 35, 40],
   // Rooms 37–40
-  [0, 35, 0, ExitSymbol.E],
-  [ExitSymbol.W, 0, 0, ExitSymbol.G],
+  [0, 35, 0, ExitSymbol.CryptWall],
+  [ExitSymbol.WaterfallLedge, 0, 0, ExitSymbol.Grate],
   [0, 36, 38, 0],
   [45, 48, 36, DEATH_EXIT],
   // Rooms 41–44
@@ -68,7 +68,7 @@ export const mapData: ExitToken[][] = [
   [0, 40, 0, DEATH_EXIT],
   [47, 0, 47, 47],
   [0, 45, 46, 0],
-  [40, DEATH_EXIT, 0, ExitSymbol.D],
+  [40, DEATH_EXIT, 0, ExitSymbol.Drawbridge],
   // Rooms 49–52
   [0, 0, 48, 50],
   [0, 52, 49, 51],
@@ -81,18 +81,18 @@ export const mapData: ExitToken[][] = [
 
 export function resolveMapToken(token: ExitToken, state: GameState): number {
   switch (token) {
-    case ExitSymbol.H:
-      return state.H;
-    case ExitSymbol.T:
-      return state.T;
-    case ExitSymbol.E:
-      return state.E;
-    case ExitSymbol.W:
-      return state.W;
-    case ExitSymbol.G:
-      return state.G;
-    case ExitSymbol.D:
-      return state.D;
+    case ExitSymbol.BridgeRope:
+      return state.bridgeRopeExit;
+    case ExitSymbol.BombDoor:
+      return state.bombDoorExit;
+    case ExitSymbol.CryptWall:
+      return state.cryptWallExit;
+    case ExitSymbol.WaterfallLedge:
+      return state.waterfallLedgeExit;
+    case ExitSymbol.Grate:
+      return state.grateExit;
+    case ExitSymbol.Drawbridge:
+      return state.drawbridgeExit;
     default:
       return token;
   }
